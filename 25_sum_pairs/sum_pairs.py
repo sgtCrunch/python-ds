@@ -21,3 +21,10 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+   
+    for offset in range(1,len(nums)-1):
+        for i in range(len(nums)-offset):
+            if nums[i] + nums[i+offset] == goal:
+                return (nums[i], nums[i+offset])
+            
+    return ()

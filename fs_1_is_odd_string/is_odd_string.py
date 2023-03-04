@@ -29,3 +29,9 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    total = 0
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    for letter in word.lower():
+        total += alphabet.index(letter) + 1
+
+    return total % 2 == 1

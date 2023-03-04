@@ -16,3 +16,6 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    copy = a[2][:]
+    copy.extend(b[2])
+    return len(set(copy)) != len(copy)
